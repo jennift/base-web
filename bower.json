@@ -1,0 +1,15 @@
+{
+  "name": "web-base-builder",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.7",
+    "animate.css": "^3.5.2"
+  }
+}
