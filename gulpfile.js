@@ -8,6 +8,7 @@ var imagemin 	= require('gulp-imagemin');
 var cache 		= require('gulp-cache'); //help make optimizing img faster
 var rename		= require('gulp-rename');
 var runSequence = require('run-sequence');
+var del 		= require('del');
 
 //compile (less, scss etc) files
 gulp.task('less', function() {
@@ -66,4 +67,9 @@ gulp.task('default', function(callback) {
 		['less', 'minjs', 'images', 'browserSync', 'watch'],
 		callback
 	);
+});
+
+//resetting folder structure
+gulp.task('clean', function() {
+  del(['source/css', 'www/src/**']);
 });
